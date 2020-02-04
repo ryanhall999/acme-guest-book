@@ -24,8 +24,8 @@
 				const [guests, setGuests] = useState([]);
 				useEffect(() => {
 					fetch("/api/guests")
-						.then(response => (words = response.json()))
-						.then(setGuests(words));
+						.then(response => response.json())
+						.then(json => setGuests(json));
 				});
 				return (
 					<div>
